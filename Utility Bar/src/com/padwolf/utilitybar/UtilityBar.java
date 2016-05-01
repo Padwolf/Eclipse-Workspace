@@ -1,10 +1,19 @@
 package com.padwolf.utilitybar;
 
-public class UtilityBar {
+import javax.swing.JFrame;
+
+import com.padwolf.utilitybar.settings.Settings;
+
+public class UtilityBar extends JFrame{
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		new UtilityBar();
+		
+		new Settings();
+	}
+	
+	public UtilityBar(){
+		
 	}
 
 }
