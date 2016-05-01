@@ -14,11 +14,14 @@ public class Settings {
 	public Settings(){
 		File file = new File("settings.sdt");
 		try {
-			PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(file)));
-			InputStream in = new BufferedInputStream(new FileInputStream(file));
 			if (!file.exists()){
 				file.createNewFile();
-				
+				PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(file)));
+				InputStream in = new BufferedInputStream(new FileInputStream(file));
+				out.println("screen-side=left");
+				out.println("width=150");
+				out.flush();
+				out.close();
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
